@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1 id="heading">Please play this dice game</h1>
+         <nav>
+      <a href="INDEX.html">Home</a> 
+      <br>
+      <a href="Boards.html">Boards</a>
+      <br>
+      <a href="game.html">Game</a>
+    </nav>
+        <button onclick="playDiceGame();">Play Dice Game</button>
+
+
+        <div id="divResult">Dice Game Results</div>
+        <div id="divDie1">Die 1 Roll</div>
+        <div id="divDie2">Die 2 Roll</div>
+        <div id="divSum">Sum of the Rolls</div>
+
+        <script>
+            function playDiceGame(){
+
+                console.log("playDiceGame function called");
+
+                let die1 = rollDie();
+                let die2 = rollDie();
+                
+                console.log("die1=" +die1);
+                console.log("die2="+die2);
+
+                let sum = die1 + die2;
+                
+
+                let divDie1 = document.getElementById("divDie1");
+                 let divDie2 = document.getElementById("divDie2");
+                 let divSum = document.getElementById("divSum");
+                let divResult = document.getElementById("divResult");
+
+                //change the text in the HTML elements
+                divDie1.textContent ="Die 1:" + die1;
+                divDie2.textContent ="Die 2:" + die2;
+                divSum.textContent= "Sum is:" + sum;
+
+
+
+
+                if(sum == 8 || sum ==12){
+                    console.log("you lost :(");
+
+                    divResult.textContent="You lost:(";
+
+                     //next statement will check to see if you won
+                //Check to see if numbers are odd
+
+                else if (die1==die2 && die1 % 1 ==0);
+                console.log("You won:(");
+
+                divResult.textContent=("You won");
+                }
+               
+
+
+          }
+
+          //function to simulate the rolling of a 12-sided die
+          function rollDie(){
+            let randomNumber = Math.random() * 12;
+
+            //round the number up to the next whole number
+            randomNumber = Math.ceil(randomNumber);
+
+            // return the random number that was generated
+            return randomNumber
+
+ 
+          }
+
+        </script>
+          
+
+    </header>
+    
+</body>
+</html>
