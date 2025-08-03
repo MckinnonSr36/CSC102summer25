@@ -4,13 +4,13 @@ function validateForm(){
 
             let lastName = document.getElementById("txtLastName").value;
 
-            let zipCode = document.getElementById("txtZip").vaule;
+            let zipCode = document.getElementById("txtZip").value;
 
             console.log("FirstName"+ firstName);
              console.log("lastName"+ lastName);
               console.log("zipCode"+ zipCode);
 
-              let fullName = FirstName + " " + lastName;
+              let fullName = firstName + " " + lastName;
 
               console.log("fullName" + fullName);
 
