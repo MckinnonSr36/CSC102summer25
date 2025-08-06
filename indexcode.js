@@ -20,7 +20,7 @@ let intervalID = 0;
         },1000 ); 
 
         document.getElementById("btnStart").disabled = true;
-        document.getElementById("btnStop").disabled = true;
+        document.getElementById("btnStop").disabled = false;
     }
 
     function stopMove(){
