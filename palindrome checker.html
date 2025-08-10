@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <header>
+         <h1> Welcome to my First Webpage</h1>
+       <nav>
+      <a href="INDEX.html">Home</a> 
+      <br>
+      <a href="Boards.html">Boards</a>
+      <br>
+      <a href="game.html">Game</a>
+      <br>
+       <a href="Strings.html">Strings</a>
+       <br>
+      <a href="palindrome checker.html">Palindrome</a>
+
+    </nav>
+    </header>
+    
+
+    <main>
+        <!--Basics of setting up the form so that when the form is submitted It will check if the word is Palindrome -->
+       <form name="frmPalindrome" id="frmPalindrome" onsubmit="checkPalindrome(event);">
+        <label for="txtWord">Enter a word or phrase:</label>
+        <input type="text" id="txtWord" name="txtWord">
+        <input type="submit" value="Check Word">
+        </form>
+        <div id="divPalinResults"></div>
+    </main>
+    <!--TODO: Move JS code to seperate .js file-->
+    <script src="palindrome code.js">
+       
+
+     
+    </script>
+</body>
+</html>
