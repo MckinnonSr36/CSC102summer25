@@ -1,84 +1,41 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Old School car stats</title>
-     <link rel="stylesheet" href="main.css">
+    <title>Cake Baker Stats</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    </head>
-<header>
-  <h1> Cake baker stats</h1>
-    <nav>
-       <a href="INDEX.html">Home</a> 
-      <br>
-      <a href="Boards.html">Boards</a>
-      <br>
-      <a href="game.html">Game</a>
-      <br>
-       <a href="Strings.html">Strings</a>
-       <br>
-      <a href="palindrome checker.html">Palindrome</a>
-      <br>
-      <a href="cakebaker.html">Cake Baker Ranking</a>
-    </nav>
-  </header>
 
-  <main>
+<header>
+    <h1>Cake Baker Stats</h1>
+    <nav>
+        <a href="INDEX.html">Home</a><br>
+        <a href="Boards.html">Boards</a><br>
+        <a href="game.html">Game</a><br>
+        <a href="Strings.html">Strings</a><br>
+        <a href="palindrome checker.html">Palindrome</a><br>
+        <a href="cakebaker.html">Cake Baker Ranking</a>
+    </nav>
+</header>
+
+<main>
     <h2>Cake Baker Ranking</h2>
-    <h3> Total Cake Baked</h3>
+    <h3>Total Cakes Baked</h3>
+    <div id="divTotalCakes">0</div>
+
+    <h3>Cake Baker Level</h3>
     <div id="divBakingLevel">Beginner</div>
+
     <label for="numCakes">Enter Cakes Baked</label>
     <input type="number" id="numCakes" name="numCakes">
-    <button on click="updateBakerStats();">Update Stats</button>
-  </main>
+    <button onclick="updateBakerStats();">Update Stats</button>
+</main>
 
-  <!--Move to external JS file-->
-  <script>
-    //create the function to manage the stats
-    function updateBakerStats(){
-        //get the current total number of cakes from the page
-        let totalCakes = parseInt(document.getElementById("divTotalCakes").textContent);
+<script src="cakebakercode.js">
 
-        //get the new number of cakes
-        let newCakesNum = parseInt(document.getElementById("numCakes").value);
+</script>
 
-        //new total of cakes
-        let newCakeTotal = TotalCakes + newCakesNum;
-
-        //variable to keep track of cakes baker level
-        let bakerLevel = "";
-
-        // assign a level based on number of cakes
-        if (newCakeTotal > 100){
-            bakerLevel = "Cakes baker Guru";
-
-        }
-       else if (newCakeTotal > 80){
-        bakerLevel = "Cake Baker Extraordinaire";
-       }
-       
-       
-        else if (newCakeTotal > 60){
-            bakerLevel = "Cake Baker Chief";
-        }
-        else if (newCakeTotal > 20){
-            bakerLevel ="Cake Baker Apprentice";
-        }
-        else{
-            bakerLevel = "Beginner";
-        }
-      
-     
-        //update total cakes on page
-        document.getElementById("divTotalCakes").textContent = newCakeTotal;
-        // update the baking level
-         document.getElementById("divBakingLevel").textContent = bakerLevel;
-    }
-
-  </script>
-    
 </body>
 </html>
