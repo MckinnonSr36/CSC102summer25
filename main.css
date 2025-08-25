@@ -38,4 +38,9 @@ footer{
 
 h1{
     text-align: center;
+    text-decoration: black underline;
+}
+a{
+    text-decoration:whitesmoke ;
+    color:blue
 }
